@@ -52,14 +52,6 @@ jobs:
         run: cat ./dist/index.html
       - name: Modify some stuff
         run: bun run ./mainsite.ts
-      - name: Deploy on Neocities
-        uses: bcomnes/deploy-to-neocities@v3
-        with:
-          api_key: ${{ secrets.NEOCITIES_API_TOKEN }}
-          cleanup: false
-          neocities_supporter: false
-          preview_before_deploy: true
-          dist_dir: 'dist/'
       - name: Rename not_found back to 404
         continue-on-error: true
         run: mv ./dist/not_found.html ./dist/404.html

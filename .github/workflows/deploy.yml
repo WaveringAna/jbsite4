@@ -76,7 +76,7 @@ jobs:
         env:
           SITE_PATH: 'dist'
           SITE_NAME: 'jb-site'
-          WISP_HANDLE: 'jbc.lol'
+          WISP_HANDLE: 'anaonamushroom.bsky.social'
           WISP_APP_PASSWORD: '${{ secrets.WISP_APP_PASSWORD }}'
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
